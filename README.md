@@ -79,7 +79,8 @@ SELECT COUNT(DISTINCT replacement_cost) FROM film
 SELECT COUNT(*) FROM film
 WHERE title LIKE 'T%' AND rating = 'G' ;
 ```
-4)country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?```
+4)country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+```
 SELECT COUNT(country) FROM country
 WHERE country LIKE '_____' ;
 ```
