@@ -113,3 +113,48 @@ WHERE store_id _ 1
 ORDER BY last_name DESC
 LIMIT 4;
 ```
+
+## Ödev 6
+1)film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+```
+SELECT AVG(rental_Rate) FROM film;
+```
+2)film tablosunda bulunan filmlerden kaç tanesi 'C' karakteri ile başlar?
+```
+SELECT COUNT(*) FROM film
+WHERE title LIKE 'C%';
+```
+3)film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+```
+SELECT MAX(length) FROM film
+WHERE rental_rate = 0.99;
+```
+4)film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+WHERE length > 150;
+```
+
+##Ödev 7
+1)film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+```
+SELECT rating FROM film
+GROUP BY rating;
+```
+2)film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+```
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50
+ORDER BY replacement_cost
+```
+3)customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir? 
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+WHERE length > 150;
+```
+4)city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız.
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+WHERE length > 150;
+```
