@@ -196,9 +196,18 @@ where birthday = '1935-10-21';
 ```
 4)Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 ```
-CREATE TABLE employee(
-    id INT PRIMARY KEY ,
-    name VARCHAR(50) NOT NULL,
-	  email VARCHAR(100) NOT NULL,
-    birthday DATE);
+DELETE FROM employee
+WHERE id = '43' ;
+----------------------
+DELETE FROM employee
+WHERE birthday = '1940-07-05' ;
+----------------------
+DELETE FROM employee
+WHERE name ='Judie' ;
+----------------------
+DELETE FROM employee
+WHERE email = 'gdefreyne4@hhs.gov' ;
+----------------------
+DELETE FROM employee
+WHERE id = '8' ;
 ```
