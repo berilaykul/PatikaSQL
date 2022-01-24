@@ -158,3 +158,47 @@ GROUP BY store_id;
 SELECT country_id, COUNT(*) FROM city
 GROUP BY country_id;
 ```
+
+## Ödev 8
+1)test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+```
+CREATE TABLE employee(
+    id INT PRIMARY KEY ,
+    name VARCHAR(50) NOT NULL,
+	  email VARCHAR(100) NOT NULL,
+    birthday DATE);
+```
+2)Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+```
+https://www.mockaroo.com/ üzerinden sütun bilgilerine göre yeni veriler hazırlanır.
+```
+3)Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+```
+UPDATE employee
+SET birthday = '1997-12-10'
+WHERE id=46;
+----------------------
+UPDATE employee
+SET name = 'Beril'
+WHERE id =4;
+----------------------
+update employee
+set id = '65'
+where name ='Debi';
+----------------------
+update employee
+set name ='Mary'
+where email = 'mbottq@chron.com';
+----------------------
+update employee
+set id= 78
+where birthday = '1935-10-21';
+```
+4)Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+```
+CREATE TABLE employee(
+    id INT PRIMARY KEY ,
+    name VARCHAR(50) NOT NULL,
+	  email VARCHAR(100) NOT NULL,
+    birthday DATE);
+```
